@@ -1,0 +1,136 @@
+/* Modern Blogs Page - Matches Home Theme */
+.blogs-modern {
+    overflow-x: hidden;
+    background-color: #F5F5F7;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+    padding-top: 150px;
+    /* Space for Navbar */
+    padding-bottom: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-theme='dark'] .blogs-modern {
+    background-color: #000000;
+}
+
+/* Mouse Spotlight */
+.blogs-modern::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(900px circle at var(--x, 50%) var(--y, 50%),
+            rgba(0, 0, 0, 0.04),
+            transparent 40%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+[data-theme='dark'] .blogs-modern::before {
+    background: radial-gradient(900px circle at var(--x, 50%) var(--y, 50%),
+            rgba(29, 78, 255, 0.18),
+            transparent 40%);
+}
+
+.blogs-content-glass {
+    /* Liquid Glass Aesthetic */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(30px) saturate(140%);
+    -webkit-backdrop-filter: blur(30px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+
+    border-radius: 30px;
+    padding: 60px;
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+[data-theme='dark'] .blogs-content-glass {
+    background: rgba(40, 40, 40, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.display-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1D1D1F;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .display-heading {
+    color: #F5F5F7;
+}
+
+.blogs-text {
+    font-size: 1.2rem;
+    color: #86868B;
+    line-height: 1.5;
+}
+
+[data-theme='dark'] .blogs-text {
+    color: #A1A1A6;
+}
+
+/* Pulsing Dot */
+.pulsing-dot {
+    width: 20px;
+    height: 20px;
+    background: #0071e3;
+    border-radius: 50%;
+    margin: 40px auto 0 auto;
+    box-shadow: 0 0 20px rgba(0, 113, 227, 0.6);
+}
+
+/* Hero Background Blobs (Shared with Home) */
+.hero-bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+}
+
+.blob-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(62, 143, 250, 0.3) 0%, rgba(62, 143, 250, 0) 70%);
+    top: -10%;
+    right: -10%;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(142, 68, 173, 0.2) 0%, rgba(142, 68, 173, 0) 70%);
+    bottom: 20%;
+    left: -10%;
+}

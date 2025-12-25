@@ -1,0 +1,472 @@
+/* Modern Home Styles - iOS Inspired */
+.home-modern {
+    overflow-x: hidden;
+    /* Soft slightly off-white background to make white cards pop */
+    background-color: #F5F5F7;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme='dark'] .home-modern {
+    background-color: #000000;
+}
+
+/* Mouse Follower Light/Glow */
+.home-modern::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    /* Sit above background but below interactivity if carefully managed, else 0 and adjust content */
+    background: radial-gradient(900px circle at var(--x, 50%) var(--y, 50%),
+            rgba(0, 0, 0, 0.04),
+            transparent 40%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+[data-theme='dark'] .home-modern::before {
+    background: radial-gradient(900px circle at var(--x, 50%) var(--y, 50%),
+            rgba(29, 78, 255, 0.18),
+            transparent 40%);
+}
+
+/* Sections */
+section {
+    padding: 120px 0;
+    position: relative;
+}
+
+/* Hero Section */
+.hero-modern {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 180px;
+    /* Increased from 80px to avoid nav overlap */
+}
+
+.hero-bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    /* Heavy blur for that soft glow */
+    opacity: 0.6;
+}
+
+.blob-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(62, 143, 250, 0.3) 0%, rgba(62, 143, 250, 0) 70%);
+    top: -20%;
+    right: -20%;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(142, 68, 173, 0.2) 0%, rgba(142, 68, 173, 0) 70%);
+    bottom: -10%;
+    left: -10%;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.display-heading {
+    font-size: 5rem;
+    /* Larger, bolder like iOS large titles */
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    color: #1D1D1F;
+    /* Apple's near-black */
+    transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .display-heading {
+    color: #F5F5F7;
+}
+
+.text-highlight {
+    background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+    /* iOS Blue to Purple */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lead-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #86868B;
+    /* Apple's gray text */
+    margin-bottom: 48px;
+    line-height: 1.5;
+    max-width: 640px;
+    transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .lead-text {
+    color: #A1A1A6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 980px;
+    /* Fully rounded pill */
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Apple-like ease */
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.home-btn.primary {
+    background: #0071e3;
+    /* iOS System Blue */
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+}
+
+.home-btn.primary:hover {
+    background: #0077ED;
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 113, 227, 0.4);
+}
+
+.home-btn.secondary {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    color: #0071e3;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .home-btn.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.02);
+}
+
+[data-theme='dark'] .home-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.section-header {
+    margin-bottom: 80px;
+}
+
+.overline {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    color: #86868B;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.section-header h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1D1D1F;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .section-header h2 {
+    color: #F5F5F7;
+}
+
+.services-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* iOS Widget Style Card - Liquid Glass */
+.service-card-modern {
+    /* Liquid Glass Aesthetic verified from nav */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(30px) saturate(140%);
+    -webkit-backdrop-filter: blur(30px) saturate(140%);
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme='dark'] .service-card-modern {
+    background: rgba(40, 40, 40, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.service-card-modern:hover {
+    transform: scale(1.03);
+    /* Slight zoom */
+    box-shadow: 0 20px 40px -4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme='dark'] .service-card-modern:hover {
+    background: rgba(44, 44, 46, 0.9);
+}
+
+.icon-box {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #007AFF, #00C6FF);
+    /* Vibrant gradient icons */
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
+}
+
+.service-card-modern h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1D1D1F;
+    transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .service-card-modern h3 {
+    color: #FFF;
+}
+
+.service-card-modern p {
+    font-size: 1rem;
+    color: #86868B;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .service-card-modern p {
+    color: #AEAEB2;
+}
+
+/* Why Us Section */
+.why-modern {
+    padding-bottom: 140px;
+    transition: background-color 0.3s ease;
+}
+
+.why-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.why-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #1D1D1F;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .why-text h2 {
+    color: #F5F5F7;
+}
+
+.why-text>p {
+    font-size: 1.2rem;
+    color: #424245;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .why-text>p {
+    color: #A1A1A6;
+}
+
+.modern-list {
+    list-style: none;
+    padding: 0;
+}
+
+.modern-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 16px 20px;
+
+    /* Liquid Glass Aesthetic */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(30px) saturate(140%);
+    -webkit-backdrop-filter: blur(30px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+[data-theme='dark'] .modern-list li {
+    background: rgba(40, 40, 40, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.modern-list li:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme='dark'] .modern-list li:hover {
+    background: rgba(44, 44, 46, 0.9);
+}
+
+.modern-list li svg {
+    color: #0071e3;
+    min-width: 24px;
+}
+
+.modern-list li span {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #1D1D1F;
+    transition: color 0.3s ease;
+}
+
+[data-theme='dark'] .modern-list li span {
+    color: #F5F5F7;
+}
+
+.abstract-card {
+    background: linear-gradient(135deg, #0071e3 0%, #4c1130 100%);
+    padding: 60px;
+    border-radius: 32px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 1 / 1;
+    /* Square like a big icon */
+}
+
+/* Glass shine effect */
+.abstract-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+.abstract-card h3 {
+    font-size: 5.5rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    opacity: 0.9;
+    /* Already has a background/gradient, but shadow can add depth */
+    filter: drop-shadow(calc(var(--mouse-x, 0) * -30px) calc(var(--mouse-y, 0) * -30px) 15px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .why-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .display-heading {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .display-heading {
+        font-size: 2.8rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .home-btn {
+        width: 100%;
+    }
+
+    .modern-list li {
+        padding: 12px 16px;
+        gap: 12px;
+    }
+
+    .modern-list li span {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+}
