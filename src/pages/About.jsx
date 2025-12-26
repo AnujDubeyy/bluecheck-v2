@@ -65,7 +65,7 @@ const About = () => {
                         <div className="about-block">
                             <h3 className="section-subheading">Our Philosophy</h3>
                             <p className="philosophy-intro">
-                                We believe that good consulting is not about complexity. It is about understanding the client’s context, identifying risks early, and providing solutions that are practical, lawful and sustainable.
+                                We believe that good consulting is not about complexity. It is about understanding the client’s context, identifying risks early and providing solutions that are practical, lawful and sustainable.
                             </p>
                             <p className="philosophy-intro">Our advisory philosophy is built on three pillars:</p>
                             <div className="philosophy-grid">

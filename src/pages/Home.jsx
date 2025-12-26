@@ -120,48 +120,50 @@ const Home = () => {
             {/* Why Us / Philosophy */}
             <section className="why-modern">
                 <div className="container">
-                    <div className="why-layout">
-                        <motion.div
-                            className="why-text"
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                    <div className="why-header">
+                        <motion.span
+                            className="overline"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
+                        >WHY CHOOSE US</motion.span>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >The BlueCheck Difference</motion.h2>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
                         >
-                            <span className="overline">WHY CHOOSE US</span>
-                            <h2>The BlueCheck Difference</h2>
-                            <p>Our approach is grounded, transparent and aligned with business realities. We believe in clarity over jargon.</p>
+                            Our approach is grounded, transparent and aligned with business realities. We believe in clarity over jargon.
+                        </motion.p>
+                    </div>
 
-                            <ul className="modern-list">
-                                <li>
-                                    <Icons.Focus />
-                                    <span><strong>Business Focused:</strong> Tailored for businesses of any size</span>
-                                </li>
-                                <li>
-                                    <Icons.Expert />
-                                    <span><strong>Regulatory Expert:</strong> Deep framework understanding.</span>
-                                </li>
-                                <li>
-                                    <Icons.Practical />
-                                    <span><strong>Practical Solutions:</strong> Ideas that work on the ground.</span>
-                                </li>
-                                <li>
-                                    <Icons.Professional />
-                                    <span><strong>Professional Conduct:</strong> Ethical and disciplined.</span>
-                                </li>
-                            </ul>
-                        </motion.div>
-                        <motion.div
-                            className="why-visual"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="abstract-card">
-                                <h3>Clarity.</h3>
-                                <h3>Confidence.</h3>
-                                <h3>Action.</h3>
-                            </div>
-                        </motion.div>
+                    <div className="why-grid">
+                        {[
+                            { title: 'Business Focused', desc: 'Tailored for businesses of any size throughout their lifecycle.', icon: Icons.Focus },
+                            { title: 'Regulatory Expert', desc: 'Deep understanding of frameworks to ensure full compliance.', icon: Icons.Expert },
+                            { title: 'Practical Solutions', desc: 'Actionable ideas that work effectively on the ground.', icon: Icons.Practical },
+                            { title: 'Professional Conduct', desc: 'Ethical, disciplined, and transparent in every interaction.', icon: Icons.Professional }
+                        ].map((feature, index) => (
+                            <motion.div
+                                className="why-card"
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ type: "spring", stiffness: 50, delay: index * 0.1 }}
+                            >
+                                <div className="why-icon">
+                                    <feature.icon />
+                                </div>
+                                <h3>{feature.title}</h3>
+                                <p>{feature.desc}</p>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>

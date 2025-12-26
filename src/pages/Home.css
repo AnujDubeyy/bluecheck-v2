@@ -309,140 +309,113 @@ section {
     transition: background-color 0.3s ease;
 }
 
-.why-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+.why-header {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 0 60px 0;
 }
 
-.why-text h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #1D1D1F;
+.why-header h2 {
+    font-size: 3.5rem;
     font-weight: 700;
+    color: #1D1D1F;
     letter-spacing: -0.02em;
+    margin-bottom: 24px;
     transition: color 0.3s ease;
 }
 
-[data-theme='dark'] .why-text h2 {
+[data-theme='dark'] .why-header h2 {
     color: #F5F5F7;
 }
 
-.why-text>p {
-    font-size: 1.2rem;
-    color: #424245;
-    margin-bottom: 40px;
+.why-header p {
+    font-size: 1.3rem;
+    color: #86868B;
+    line-height: 1.5;
     transition: color 0.3s ease;
 }
 
-[data-theme='dark'] .why-text>p {
+[data-theme='dark'] .why-header p {
     color: #A1A1A6;
 }
 
-.modern-list {
-    list-style: none;
-    padding: 0;
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
 }
 
-.modern-list li {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
-    padding: 16px 20px;
-
-    /* Liquid Glass Aesthetic */
-    background: rgba(255, 255, 255, 0.35);
+.why-card {
+    background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(30px) saturate(140%);
     -webkit-backdrop-filter: blur(30px) saturate(140%);
+    padding: 40px;
+    border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.05),
+        0 4px 20px rgba(0, 0, 0, 0.05),
         inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-
-    border-radius: 16px;
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-[data-theme='dark'] .modern-list li {
+[data-theme='dark'] .why-card {
     background: rgba(40, 40, 40, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.modern-list li:hover {
-    transform: translateX(8px);
-    background: rgba(255, 255, 255, 0.9);
+.why-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-[data-theme='dark'] .modern-list li:hover {
-    background: rgba(44, 44, 46, 0.9);
+[data-theme='dark'] .why-card:hover {
+    background: rgba(50, 50, 50, 0.8);
 }
 
-.modern-list li svg {
-    color: #0071e3;
-    min-width: 24px;
+.why-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #007AFF, #5856D6);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 16px rgba(0, 122, 255, 0.3);
 }
 
-.modern-list li span {
-    font-size: 1.05rem;
-    font-weight: 500;
+.why-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
     color: #1D1D1F;
-    transition: color 0.3s ease;
+    margin-bottom: 12px;
 }
 
-[data-theme='dark'] .modern-list li span {
+[data-theme='dark'] .why-card h3 {
     color: #F5F5F7;
 }
 
-.abstract-card {
-    background: linear-gradient(135deg, #0071e3 0%, #4c1130 100%);
-    padding: 60px;
-    border-radius: 32px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-    aspect-ratio: 1 / 1;
-    /* Square like a big icon */
+.why-card p {
+    font-size: 1.1rem;
+    color: #86868B;
+    line-height: 1.5;
 }
 
-/* Glass shine effect */
-.abstract-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-    pointer-events: none;
-}
-
-.abstract-card h3 {
-    font-size: 5.5rem;
-    font-weight: 800;
-    margin: 0;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    opacity: 0.9;
-    /* Already has a background/gradient, but shadow can add depth */
-    filter: drop-shadow(calc(var(--mouse-x, 0) * -30px) calc(var(--mouse-y, 0) * -30px) 15px rgba(0, 0, 0, 0.3));
+[data-theme='dark'] .why-card p {
+    color: #A1A1A6;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-    .why-layout {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
     .display-heading {
         font-size: 3.5rem;
+    }
+
+    .why-header h2 {
+        font-size: 2.8rem;
     }
 }
 
@@ -460,13 +433,9 @@ section {
         width: 100%;
     }
 
-    .modern-list li {
-        padding: 12px 16px;
-        gap: 12px;
+    .why-grid {
+        grid-template-columns: 1fr;
     }
+}
 
-    .modern-list li span {
-        font-size: 0.95rem;
-        line-height: 1.4;
-    }
 }

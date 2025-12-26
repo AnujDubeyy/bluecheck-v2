@@ -28,7 +28,7 @@ const PrivacyPolicy = () => {
                             <li>Contact us via email</li>
                             <li>Interact with the website in a general manner</li>
                         </ul>
-                        <p>Information collected may include your name, email address, contact details, organisation name, and any other information you choose to share.</p>
+                        <p>Information collected may include your name, email address, contact details, organisation name and any other information you choose to share.</p>
                         <p>We do not knowingly collect sensitive personal data unless explicitly required and voluntarily disclosed.</p>
                     </div>
 
@@ -41,12 +41,12 @@ const PrivacyPolicy = () => {
                             <li>Improving website functionality and user experience</li>
                             <li>Complying with applicable legal or regulatory obligations</li>
                         </ul>
-                        <p>We do not sell, rent, or commercially exploit personal information.</p>
+                        <p>We do not sell, rent or commercially exploit personal information.</p>
                     </div>
 
                     <div className="privacy-section">
                         <h2>Data Protection and Security</h2>
-                        <p>BlueCheck Advisory follows reasonable security practices and procedures to protect personal information from unauthorised access, misuse, alteration, or disclosure.</p>
+                        <p>BlueCheck Advisory follows reasonable security practices and procedures to protect personal information from unauthorised access, misuse, alteration or disclosure.</p>
                         <p>Information is retained only for as long as necessary to fulfil its intended purpose or to meet legal requirements.</p>
                     </div>
 
@@ -78,12 +78,12 @@ const PrivacyPolicy = () => {
 
                     <div className="privacy-section">
                         <h2>Disclaimer</h2>
-                        <p>The content on this website is provided for general informational purposes only and does not constitute legal, regulatory, financial, or professional advice. Specific advice should be sought based on individual facts and circumstances.</p>
+                        <p>The content on this website is provided for general informational purposes only and does not constitute legal, regulatory, financial or professional advice. Specific advice should be sought based on individual facts and circumstances.</p>
                     </div>
 
                     <div className="privacy-section">
                         <h2>Intellectual Property</h2>
-                        <p>All content on this website, including text and branding, is the property of BlueCheck Advisory unless otherwise stated. Unauthorised use, reproduction, or distribution is prohibited.</p>
+                        <p>All content on this website, including text and branding, is the property of BlueCheck Advisory unless otherwise stated. Unauthorised use, reproduction or distribution is prohibited.</p>
                     </div>
 
                     <div className="privacy-section">

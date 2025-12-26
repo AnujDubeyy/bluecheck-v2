@@ -81,8 +81,13 @@ const Contact = () => {
                     className="text-center mb-12"
                 >
                     <h1 className="display-heading">Contact Us</h1>
-                    <p className="lead-text" style={{ maxWidth: '600px', margin: '0 auto 60px', fontSize: '1.2rem' }}>
+                    <p className="lead-text" style={{ maxWidth: '600px', margin: '0 auto 16px', fontSize: '1.2rem' }}>
                         We welcome enquiries from individuals and businesses seeking structured and compliant advisory support.
+                    </p>
+                    <p className="lead-text" style={{ maxWidth: '600px', margin: '0 auto 60px', fontSize: '1.2rem' }}>
+                        <a href="mailto:bluecheckadvisory@gmail.com" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.target.style.color = 'var(--color-primary)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
+                            bluecheckadvisory@gmail.com
+                        </a>
                     </p>
                 </motion.div>
 
