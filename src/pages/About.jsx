@@ -50,10 +50,10 @@ const About = () => {
                         <div className="about-block">
                             <h3>Our Firm</h3>
                             <p>
-                                BlueCheck Advisory is a professional consulting and advisory firm focused on helping organisations navigate risk, governance and compliance with clarity and confidence.
+                                BlueCheck Consulting is a professional consulting firm focused on helping organisations navigate risk, governance and compliance with clarity and confidence.
                             </p>
                             <p>
-                                We work with businesses and leadership teams to design practical, compliant and sustainable solutions aligned with regulatory and operational realities. Our advisory approach is grounded in structured thinking, professional discipline and a deep respect for governance and ethical standards.
+                                We work with businesses and leadership teams to design practical, compliant and sustainable solutions aligned with regulatory and operational realities. Our consulting approach is grounded in structured thinking, professional discipline and a deep respect for governance and ethical standards.
                             </p>
                         </div>
                     </motion.section>
@@ -67,7 +67,7 @@ const About = () => {
                             <p className="philosophy-intro">
                                 We believe that good consulting is not about complexity. It is about understanding the client’s context, identifying risks early and providing solutions that are practical, lawful and sustainable.
                             </p>
-                            <p className="philosophy-intro">Our advisory philosophy is built on three pillars:</p>
+                            <p className="philosophy-intro">Our consulting philosophy is built on three pillars:</p>
                             <div className="philosophy-grid">
                                 <motion.div className="philosophy-card modern-glass" whileHover={{ scale: 1.05 }}>
                                     <h4>Compliance first mindset</h4>

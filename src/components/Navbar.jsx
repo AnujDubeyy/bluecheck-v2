@@ -40,7 +40,7 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="nav-logo">
                 <Link to="/" onClick={() => setIsMenuOpen(false)}>
-                    <img src={logoSymbol} alt="BlueCheck Advisory" />
+                    <img src={logoSymbol} alt="BlueCheck Consulting" />
                 </Link>
             </div>
 

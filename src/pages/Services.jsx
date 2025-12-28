@@ -17,14 +17,14 @@ const servicesData = [
             },
             {
                 title: "Data Privacy & DPDP Compliance",
-                desc: "Data lifecycle mapping, DPIA, consent management, DPO advisory and compliance with India's DPDP Act & GDPR."
+                desc: "Data lifecycle mapping, DPIA, consent management, DPO consulting and compliance with India's DPDP Act & GDPR."
             },
             {
                 title: "Third-Party Risk Management (TPRM)",
                 desc: "Vendor due diligence, supplier security assessments, SLA compliance and ongoing monitoring."
             },
             {
-                title: "Regulatory Compliance Advisory",
+                title: "Regulatory Compliance Consulting",
                 desc: "Specialized compliance readiness for RBI Cybersecurity Frameworks, SEBI-CSCRF and IRDAI frameworks."
             },
             {
@@ -80,7 +80,7 @@ const servicesData = [
         ]
     },
     {
-        category: "Training, Awareness & Advisory",
+        category: "Training, Awareness & Consulting",
         items: [
             {
                 title: "Employee Security Awareness",
@@ -112,7 +112,7 @@ const servicesData = [
                 desc: "AWS / Azure / GCP configuration review, data security, IAM and compliance with ISO 27017/18."
             },
             {
-                title: "SOC & SIEM Advisory",
+                title: "SOC & SIEM Consulting",
                 desc: "SOC design and maturity assessment, SIEM use-case development, 24x7 monitoring framework, incident detection."
             },
             {
@@ -182,7 +182,7 @@ const Services = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
                     >
-                        Comprehensive advisory solutions designed to build resilience, ensure compliance and drive confidence in any regulatory landscape or other scenarios.
+                        Comprehensive consulting solutions designed to build resilience, ensure compliance and drive confidence in any regulatory landscape or other scenarios.
                     </motion.p>
                 </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import logoFooter from '../assets/logo-dark.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -15,7 +16,7 @@ const Footer = () => {
                         transition={{ duration: 0.6 }}
                         className="footer-brand"
                     >
-                        <h3 className="footer-logo">BlueCheck Advisory</h3>
+                        <img src={logoFooter} alt="BlueCheck Consulting" className="footer-logo-img" />
                         <p className="footer-slogan">Clarity. Confidence. Action.</p>
                     </motion.div>
 
@@ -36,7 +37,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; 2026 BlueCheck Advisory. All rights reserved.</p>
+                    <p>&copy; 2026 BlueCheck Consulting. All rights reserved.</p>
                 </div>
             </div>
         </footer>

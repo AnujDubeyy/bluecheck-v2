@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
 
                     <div className="privacy-section">
                         <h2>Introduction</h2>
-                        <p>This website is operated by BlueCheck Advisory. We are committed to respecting your privacy and ensuring that any personal information shared with us is handled responsibly and lawfully.</p>
+                        <p>This website is operated by BlueCheck Consulting. We are committed to respecting your privacy and ensuring that any personal information shared with us is handled responsibly and lawfully.</p>
                         <p>By accessing or using this website, you agree to the terms set out below.</p>
                     </div>
 
@@ -46,7 +46,7 @@ const PrivacyPolicy = () => {
 
                     <div className="privacy-section">
                         <h2>Data Protection and Security</h2>
-                        <p>BlueCheck Advisory follows reasonable security practices and procedures to protect personal information from unauthorised access, misuse, alteration or disclosure.</p>
+                        <p>BlueCheck Consulting follows reasonable security practices and procedures to protect personal information from unauthorised access, misuse, alteration or disclosure.</p>
                         <p>Information is retained only for as long as necessary to fulfil its intended purpose or to meet legal requirements.</p>
                     </div>
 
@@ -73,7 +73,7 @@ const PrivacyPolicy = () => {
 
                     <div className="privacy-section">
                         <h2>Third Party Links</h2>
-                        <p>This website may contain links to external websites for reference or convenience. BlueCheck Advisory is not responsible for the content or privacy practices of third party websites. Users should review the privacy policies of such websites independently.</p>
+                        <p>This website may contain links to external websites for reference or convenience. BlueCheck Consulting is not responsible for the content or privacy practices of third party websites. Users should review the privacy policies of such websites independently.</p>
                     </div>
 
                     <div className="privacy-section">
@@ -83,12 +83,12 @@ const PrivacyPolicy = () => {
 
                     <div className="privacy-section">
                         <h2>Intellectual Property</h2>
-                        <p>All content on this website, including text and branding, is the property of BlueCheck Advisory unless otherwise stated. Unauthorised use, reproduction or distribution is prohibited.</p>
+                        <p>All content on this website, including text and branding, is the property of BlueCheck Consulting unless otherwise stated. Unauthorised use, reproduction or distribution is prohibited.</p>
                     </div>
 
                     <div className="privacy-section">
                         <h2>Limitation of Liability</h2>
-                        <p>BlueCheck Advisory shall not be liable for any direct or indirect loss arising from the use of this website or reliance on its content, to the extent permitted under Indian law.</p>
+                        <p>BlueCheck Consulting shall not be liable for any direct or indirect loss arising from the use of this website or reliance on its content, to the extent permitted under Indian law.</p>
                     </div>
 
                     <div className="privacy-section">
@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
                     <div className="privacy-section">
                         <h2>Contact Information</h2>
                         <p>For any questions regarding this policy, you may contact us at:</p>
-                        <p>Email: <a href="mailto:info@bluecheckadvisory.com" className="privacy-contact-email">info@bluecheckadvisory.com</a></p>
+                        <p>Email: <a href="mailto:info@bluecheckconsulting.com" className="privacy-contact-email">info@bluecheckconsulting.com</a></p>
                     </div>
 
                 </motion.div>

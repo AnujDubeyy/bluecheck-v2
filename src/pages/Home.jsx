@@ -61,7 +61,7 @@ const Home = () => {
                         transition={{ type: "spring", stiffness: 60, damping: 20 }}
                     >
                         <h1 className="display-heading">
-                            Advisory that <br />
+                            Consulting that <br />
                             <span className="text-highlight">Empowers</span> Decisions
                         </h1>
                         <p className="lead-text">
@@ -94,7 +94,7 @@ const Home = () => {
 
                     <div className="services-grid-modern">
                         {[
-                            { title: 'Compliance Advisory', desc: 'Seamlessly meeting all regulatory requirements.', icon: Icons.Compliance },
+                            { title: 'Compliance Consulting', desc: 'Seamlessly meeting all regulatory requirements.', icon: Icons.Compliance },
                             { title: 'Governance Frameworks', desc: 'Robust frameworks for effective oversight.', icon: Icons.Governance },
                             { title: 'Risk Consulting', desc: 'Reducing risk and improving efficiency for growth.', icon: Icons.Consulting }
                         ].map((service, index) => (
