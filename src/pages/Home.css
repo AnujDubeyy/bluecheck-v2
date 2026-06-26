@@ -123,8 +123,8 @@ section {
 .lead-text {
     font-size: 1.5rem;
     font-weight: 400;
-    color: #86868B;
-    /* Apple's gray text */
+    color: #000000 !important;
+    opacity: 1 !important;
     margin-bottom: 48px;
     line-height: 1.5;
     max-width: 640px;
@@ -132,7 +132,8 @@ section {
 }
 
 [data-theme='dark'] .lead-text {
-    color: #A1A1A6;
+    color: #ffffff !important;
+    opacity: 1 !important;
 }
 
 .hero-actions {

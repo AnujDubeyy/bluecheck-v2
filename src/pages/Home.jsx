@@ -131,7 +131,7 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                        >The BlueCheck Difference</motion.h2>
+                        >The Cybrion Difference</motion.h2>
                         <motion.p
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}

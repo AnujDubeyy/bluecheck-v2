@@ -1,11 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
-    const form = useRef();
-
     const handleMouseMove = (e) => {
         const x = (e.clientX / window.innerWidth) - 0.5;
         const y = (e.clientY / window.innerHeight) - 0.5;
@@ -21,6 +18,7 @@ const Contact = () => {
         name: '',
         user_email: '', // Changed to user_email to match common EmailJS templates
         company: '',
+        subject: '',
         message: ''
     });
 
@@ -38,9 +36,9 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const { name, user_email, company, message } = formData;
+        const { name, user_email, company, subject, message } = formData;
 
-        if (!name || !user_email || !company || !message) {
+        if (!name || !user_email || !company || !subject || !message) {
             setStatus({
                 submitting: false,
                 info: { error: true, msg: "Please fill in all mandatory fields." }
@@ -50,25 +48,35 @@ const Contact = () => {
 
         setStatus({ submitting: true, info: { error: false, msg: null } });
 
-        // Keys are secured in .env file
-        const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-        const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-        const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+        const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-            .then((result) => {
-                setStatus({
-                    submitting: false,
-                    info: { error: false, msg: "Message sent! We will get back to you soon." }
-                });
-                setFormData({ name: '', user_email: '', company: '', message: '' });
-            }, (error) => {
-                console.error(error);
-                setStatus({
-                    submitting: false,
-                    info: { error: true, msg: "An error occurred. Please try again later." }
-                });
+        fetch(`${BACKEND_URL}/api/contact`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error('Failed to send message.');
+            }
+            return res.json();
+        })
+        .then((data) => {
+            setStatus({
+                submitting: false,
+                info: { error: false, msg: "Message sent! We will get back to you soon." }
             });
+            setFormData({ name: '', user_email: '', company: '', subject: '', message: '' });
+        })
+        .catch((error) => {
+            console.error(error);
+            setStatus({
+                submitting: false,
+                info: { error: true, msg: "An error occurred. Please try again later." }
+            });
+        });
     };
 
     return (
@@ -85,8 +93,8 @@ const Contact = () => {
                         We welcome enquiries from individuals and businesses seeking structured and compliant consulting support.
                     </p>
                     <p className="lead-text" style={{ maxWidth: '600px', margin: '0 auto 60px', fontSize: '1.2rem' }}>
-                        <a href="mailto:bluecheckconsulting@gmail.com" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.target.style.color = 'var(--color-primary)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
-                            bluecheckconsulting@gmail.com
+                        <a href="mailto:cybrion.consulting@gmail.com" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.target.style.color = 'var(--color-primary)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
+                            cybrion.consulting@gmail.com
                         </a>
                     </p>
                 </motion.div>
@@ -102,7 +110,7 @@ const Contact = () => {
                 >
                     <h3 className="section-subheading" style={{ color: 'var(--color-primary)' }}>Send us a Message</h3>
 
-                    <form ref={form} onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label className="form-label">
                                 Name<span className="required-star">*</span>
@@ -143,6 +151,21 @@ const Contact = () => {
                                 className="form-input"
                                 placeholder="Your Company Name"
                                 value={formData.company}
+                                onChange={handleChange}
+                                required
+                            />
+                         </div>
+
+                        <div className="form-group">
+                            <label className="form-label">
+                                Subject / Title<span className="required-star">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                name="subject"
+                                className="form-input"
+                                placeholder="Subject of your enquiry"
+                                value={formData.subject}
                                 onChange={handleChange}
                                 required
                             />

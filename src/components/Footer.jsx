@@ -16,7 +16,7 @@ const Footer = () => {
                         transition={{ duration: 0.6 }}
                         className="footer-brand"
                     >
-                        <img src={logoFooter} alt="BlueCheck Consulting" className="footer-logo-img" />
+                        <img src={logoFooter} alt="Cybrion Consulting" className="footer-logo-img" />
                         <p className="footer-slogan">Clarity. Confidence. Action.</p>
                     </motion.div>
 
@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; 2026 BlueCheck Consulting. All rights reserved.</p>
+                    <p>&copy; 2026 Cybrion Consulting. All rights reserved.</p>
                 </div>
             </div>
         </footer>

@@ -50,7 +50,7 @@ const About = () => {
                         <div className="about-block">
                             <h3>Our Firm</h3>
                             <p>
-                                BlueCheck Consulting is a professional consulting firm focused on helping organisations navigate risk, governance and compliance with clarity and confidence.
+                                Cybrion Consulting is a professional consulting firm focused on helping organisations navigate risk, governance and compliance with clarity and confidence.
                             </p>
                             <p>
                                 We work with businesses and leadership teams to design practical, compliant and sustainable solutions aligned with regulatory and operational realities. Our consulting approach is grounded in structured thinking, professional discipline and a deep respect for governance and ethical standards.
