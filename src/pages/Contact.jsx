@@ -46,6 +46,16 @@ const Contact = () => {
             return;
         }
 
+        // Email Format Validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(user_email)) {
+            setStatus({
+                submitting: false,
+                info: { error: true, msg: "Please enter a valid email address." }
+            });
+            return;
+        }
+
         setStatus({ submitting: true, info: { error: false, msg: null } });
 
         const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
@@ -57,11 +67,12 @@ const Contact = () => {
             },
             body: JSON.stringify(formData)
         })
-        .then((res) => {
+        .then(async (res) => {
+            const data = await res.json();
             if (!res.ok) {
-                throw new Error('Failed to send message.');
+                throw new Error(data.error || 'Failed to send message.');
             }
-            return res.json();
+            return data;
         })
         .then((data) => {
             setStatus({
@@ -74,7 +85,7 @@ const Contact = () => {
             console.error(error);
             setStatus({
                 submitting: false,
-                info: { error: true, msg: "An error occurred. Please try again later." }
+                info: { error: true, msg: error.message || "An error occurred. Please try again later." }
             });
         });
     };

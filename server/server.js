@@ -35,6 +35,12 @@ app.post('/api/contact', async (req, res) => {
         return res.status(400).json({ error: 'All fields are required.' });
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(user_email)) {
+        console.warn('Validation failed: invalid email format.');
+        return res.status(400).json({ error: 'Please enter a valid email address.' });
+    }
+
     try {
         // Initialize Resend Client
         const apiKey = process.env.RESEND_API_KEY || process.env.SMTP_PASS;
