@@ -68,7 +68,11 @@ export default async function handler(req, res) {
 
     if (error) {
       console.error('Resend API Error:', error);
-      return res.status(400).json({ error: error.message });
+      let errMsg = error.message || '';
+      if (errMsg.toLowerCase().includes('reply_to') || errMsg.toLowerCase().includes('email')) {
+        errMsg = "Please enter a valid email address.";
+      }
+      return res.status(400).json({ error: errMsg });
     }
 
     console.log(`Email notification sent successfully to ${TO_EMAIL}:`, data);
@@ -76,6 +80,10 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Server error:', error);
-    return res.status(500).json({ error: 'Failed to send message. Please try again later.' });
+    let errMsg = error.message || 'Failed to send message. Please try again later.';
+    if (errMsg.toLowerCase().includes('reply_to') || errMsg.toLowerCase().includes('email')) {
+      errMsg = "Please enter a valid email address.";
+    }
+    return res.status(500).json({ error: errMsg });
   }
 }

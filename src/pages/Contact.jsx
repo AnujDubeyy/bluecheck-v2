@@ -47,7 +47,7 @@ const Contact = () => {
         }
 
         // Email Format Validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
         if (!emailRegex.test(user_email)) {
             setStatus({
                 submitting: false,
@@ -70,7 +70,11 @@ const Contact = () => {
         .then(async (res) => {
             const data = await res.json();
             if (!res.ok) {
-                throw new Error(data.error || 'Failed to send message.');
+                let errMsg = data.error || 'Failed to send message.';
+                if (errMsg.toLowerCase().includes('reply_to') || errMsg.toLowerCase().includes('email')) {
+                    errMsg = "Please enter a valid email address.";
+                }
+                throw new Error(errMsg);
             }
             return data;
         })
