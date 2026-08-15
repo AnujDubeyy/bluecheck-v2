@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import SEO from '../components/SEO';
 
 // SVG Icons
 const Icons = {
@@ -51,6 +52,10 @@ const Home = () => {
 
     return (
         <div className="home-modern" onMouseMove={handleMouseMove}>
+            <SEO 
+                title="Clarity. Confidence. Action. | Regulatory Consulting" 
+                description="Cybrion Consulting combines regulatory awareness with commercial understanding to help businesses, professionals and enterprises navigate complexity with absolute confidence." 
+            />
             {/* Hero Section */}
             <section className="hero-modern">
                 <div className="container hero-container">

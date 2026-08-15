@@ -1,10 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './PrivacyPolicy.css';
+import SEO from '../components/SEO';
 
 const PrivacyPolicy = () => {
     return (
         <div className="privacy-page">
+            <SEO 
+                title="Privacy Policy & Terms of Use" 
+                description="Review the privacy practices, terms of use, and governing laws of Cybrion Consulting website." 
+            />
             <div className="container">
                 <motion.div
                     className="privacy-content"

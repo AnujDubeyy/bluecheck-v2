@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './Contact.css';
+import SEO from '../components/SEO';
 
 const Contact = () => {
     const handleMouseMove = (e) => {
@@ -96,6 +97,10 @@ const Contact = () => {
 
     return (
         <div className="contact-modern" onMouseMove={handleMouseMove}>
+            <SEO 
+                title="Contact Us | Start a Conversation" 
+                description="Get in touch with Cybrion Consulting to discuss how we can support your business compliance and governance objectives." 
+            />
             <div className="container contact-container">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

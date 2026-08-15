@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './About.css';
+import SEO from '../components/SEO';
 
 const About = () => {
     const handleMouseMove = (e) => {
@@ -34,6 +35,10 @@ const About = () => {
 
     return (
         <div className="about-modern" onMouseMove={handleMouseMove}>
+            <SEO 
+                title="About Us | Our Regulatory & Compliance Experts" 
+                description="Learn about Cybrion Consulting's team of compliance experts, philosophy, and dedication to offering practical, business-focused advisory support." 
+            />
             <div className="container about-content">
                 <motion.div
                     initial="hidden"
