@@ -108,8 +108,8 @@ const Contact = () => {
                         We welcome enquiries from individuals and businesses seeking structured and compliant consulting support.
                     </p>
                     <p className="lead-text" style={{ maxWidth: '600px', margin: '0 auto 60px', fontSize: '1.2rem' }}>
-                        <a href="mailto:cybrion.consulting@gmail.com" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.target.style.color = 'var(--color-primary)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
-                            cybrion.consulting@gmail.com
+                        <a href="mailto:info@cybrionconsulting.com" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.target.style.color = 'var(--color-primary)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
+                            info@cybrionconsulting.com
                         </a>
                     </p>
                 </motion.div>

@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
                     <div className="privacy-section">
                         <h2>Contact Information</h2>
                         <p>For any questions regarding this policy, you may contact us at:</p>
-                        <p>Email: <a href="mailto:cybrion.consulting@gmail.com" className="privacy-contact-email">cybrion.consulting@gmail.com</a></p>
+                        <p>Email: <a href="mailto:info@cybrionconsulting.com" className="privacy-contact-email">info@cybrionconsulting.com</a></p>
                     </div>
 
                 </motion.div>

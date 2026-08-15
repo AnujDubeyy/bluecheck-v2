@@ -51,7 +51,7 @@ app.post('/api/contact', async (req, res) => {
         const resend = new Resend(apiKey);
 
         const SENDER_EMAIL = process.env.SENDER_EMAIL || 'onboarding@resend.dev';
-        const TO_EMAIL = process.env.TO_EMAIL || 'cybrion.consulting@gmail.com';
+        const TO_EMAIL = process.env.TO_EMAIL || 'info@cybrionconsulting.com';
 
         // Send Notification Email to Cybrion Consulting
         const { data, error } = await resend.emails.send({
