@@ -38,34 +38,34 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-            <div className="nav-logo">
-                <Link to="/" onClick={() => setIsMenuOpen(false)}>
-                    <img src={logoSymbol} alt="Cybrion Consulting" />
-                </Link>
+            <div className="navbar-inner">
+                <div className="nav-logo">
+                    <Link to="/" onClick={() => setIsMenuOpen(false)}>
+                        <img src={logoSymbol} alt="Cybrion Consulting" />
+                    </Link>
+                </div>
+
+                <div className="nav-desktop">
+                    <ul className="nav-links">
+                        <li><Link to="/" className={isActive('/')}>Home</Link></li>
+                        <li><Link to="/services" className={isActive('/services')}>Services</Link></li>
+                        <li><Link to="/about" className={isActive('/about')}>About Us</Link></li>
+                        <li><Link to="/contact" className={isActive('/contact')}>Contact</Link></li>
+                        <li className="nav-theme-toggle-li"><ThemeToggle /></li>
+                    </ul>
+                </div>
+
+                <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle navigation">
+                    <span className={`hamburger ${isMenuOpen ? 'open' : ''}`}></span>
+                </button>
             </div>
-
-            <div className="nav-desktop">
-                <ul className="nav-links">
-                    <li><Link to="/" className={isActive('/')}>Home</Link></li>
-                    <li><Link to="/services" className={isActive('/services')}>Services</Link></li>
-                    <li><Link to="/about" className={isActive('/about')}>About Us</Link></li>
-
-                    <li><Link to="/contact" className={isActive('/contact')}>Contact Us</Link></li>
-                    <li><ThemeToggle /></li>
-                </ul>
-            </div>
-
-            <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle navigation">
-                <span className={`hamburger ${isMenuOpen ? 'open' : ''}`}></span>
-            </button>
 
             <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
                 <ul className="mobile-nav-links">
                     <li><Link to="/" className={isActive('/')} onClick={toggleMenu}>Home</Link></li>
                     <li><Link to="/services" className={isActive('/services')} onClick={toggleMenu}>Services</Link></li>
                     <li><Link to="/about" className={isActive('/about')} onClick={toggleMenu}>About Us</Link></li>
-
-                    <li><Link to="/contact" className={isActive('/contact')} onClick={toggleMenu}>Contact Us</Link></li>
+                    <li><Link to="/contact" className={isActive('/contact')} onClick={toggleMenu}>Contact</Link></li>
                     <li className="mobile-theme-toggle"><ThemeToggle /></li>
                 </ul>
             </div>
