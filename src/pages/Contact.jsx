@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Linkedin } from 'lucide-react';
 import './Contact.css';
 import SEO from '../components/SEO';
 
@@ -112,11 +113,25 @@ const Contact = () => {
                     <p className="lead-text" style={{ maxWidth: '600px', margin: '0 auto 16px', fontSize: '1.2rem' }}>
                         We welcome enquiries from individuals and businesses seeking structured and compliant consulting support.
                     </p>
-                    <p className="lead-text" style={{ maxWidth: '600px', margin: '0 auto 60px', fontSize: '1.2rem' }}>
-                        <a href="mailto:info@cybrionconsulting.com" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={(e) => e.target.style.color = 'var(--color-primary)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
-                            info@cybrionconsulting.com
+                    <p className="lead-text" style={{ maxWidth: '600px', margin: '0 auto 18px', fontSize: '1.25rem' }}>
+                        <a 
+                            href="mailto:info@cybrionconsulting.com" 
+                            className="contact-email-link"
+                        >
+                            <strong>info@cybrionconsulting.com</strong>
                         </a>
                     </p>
+                    <div className="contact-linkedin-wrap">
+                        <a 
+                            href="http://www.linkedin.com/company/cybrion-consulting-llp" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="contact-linkedin-btn"
+                        >
+                            <Linkedin size={18} />
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                    </div>
                 </motion.div>
 
 

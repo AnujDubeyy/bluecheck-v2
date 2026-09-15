@@ -66,6 +66,53 @@
     color: #A1A1A6;
 }
 
+.contact-email-link {
+    color: #0f172a;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-email-link strong {
+    font-weight: 800;
+}
+
+[data-theme='dark'] .contact-email-link {
+    color: #f8fafc;
+}
+
+.contact-email-link:hover {
+    color: #0062ff;
+}
+
+.contact-linkedin-wrap {
+    margin: 18px auto 55px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 9999px;
+    background: #0a66c2;
+    color: #ffffff;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(10, 102, 194, 0.25);
+    transition: all 0.25s ease;
+}
+
+.contact-linkedin-btn:hover {
+    background: #004182;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(10, 102, 194, 0.38);
+}
+
 /* Glass Contact Card */
 .contact-card-glass {
     /* Liquid Glass Aesthetic */
@@ -156,7 +203,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.section-subheading {
+.contact-modern .section-subheading {
     font-size: 2rem;
     font-weight: 700;
     color: #1D1D1F;
@@ -167,7 +214,7 @@
     transition: color 0.3s ease;
 }
 
-[data-theme='dark'] .section-subheading {
+[data-theme='dark'] .contact-modern .section-subheading {
     color: #F5F5F7;
 }
 

@@ -436,13 +436,16 @@
     color: #ffffff;
 }
 
-.section-subheading {
-    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-    color: #475569;
+.difference-subheading {
+    font-size: clamp(0.85rem, 1.4vw, 0.96rem);
+    font-weight: 400;
+    color: #64748b;
     line-height: 1.6;
+    max-width: 620px;
+    margin: 10px auto 0;
 }
 
-[data-theme='dark'] .section-subheading {
+[data-theme='dark'] .difference-subheading {
     color: #94a3b8;
 }
 
@@ -742,6 +745,20 @@
         padding: 0 20px;
     }
 
+    .hero-eyebrow {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 0.6rem;
+        letter-spacing: 0.07em;
+    }
+
+    .tag-separator {
+        display: inline-block;
+        opacity: 0.5;
+    }
+
     .hero-display-headline {
         font-size: clamp(2rem, 8vw, 2.8rem);
     }
@@ -838,12 +855,18 @@
     }
 
     .hero-eyebrow {
-        gap: 7px;
-        font-size: 0.65rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.58rem;
+        letter-spacing: 0.08em;
     }
 
     .tag-separator {
-        display: none;
+        display: inline-block;
+        color: #94a3b8;
+        opacity: 0.55;
     }
 
     .hero-display-headline {
@@ -882,5 +905,92 @@
     .expertise-card,
     .difference-card {
         padding: 22px 18px;
+    }
+}
+
+/* Home Connect / LinkedIn Strip */
+.home-connect-section {
+    padding: 60px 0 80px;
+    background: transparent;
+}
+
+.home-connect-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .home-connect-card {
+    background: #111622;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.home-connect-content h2 {
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    font-weight: 700;
+    color: #090d16;
+    margin: 8px 0 10px;
+    letter-spacing: -0.02em;
+}
+
+[data-theme='dark'] .home-connect-content h2 {
+    color: #ffffff;
+}
+
+.home-connect-content p {
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 560px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+[data-theme='dark'] .home-connect-content p {
+    color: #94a3b8;
+}
+
+.home-connect-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 9999px;
+    background: #0a66c2;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(10, 102, 194, 0.28);
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.home-connect-btn:hover {
+    background: #004182;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(10, 102, 194, 0.4);
+}
+
+@media (max-width: 768px) {
+    .home-connect-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 24px;
+        gap: 24px;
+    }
+
+    .home-connect-btn {
+        width: 100%;
+        justify-content: center;
     }
 }

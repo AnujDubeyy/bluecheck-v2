@@ -170,7 +170,7 @@ const Services = () => {
         <div className="services-modern" onMouseMove={handleMouseMove}>
             <SEO 
                 title="Our Services | Compliance, Governance & Risk Consulting" 
-                description="Explore our strategic consulting capabilities, including compliance advisory, governance framework design, and risk management services." 
+                description="Explore our strategic consulting capabilities, including compliance advisory, governance framework design and risk management services." 
             />
             <div className="container">
                 <div className="services-hero">

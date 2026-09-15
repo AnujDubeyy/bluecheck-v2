@@ -37,7 +37,7 @@ const About = () => {
         <div className="about-modern" onMouseMove={handleMouseMove}>
             <SEO 
                 title="About Us | Our Regulatory & Compliance Experts" 
-                description="Learn about Cybrion Consulting's team of compliance experts, philosophy, and dedication to offering practical, business-focused advisory support." 
+                description="Learn about Cybrion Consulting's team of compliance experts, philosophy and dedication to offering practical, business-focused advisory support." 
             />
             <div className="container about-content">
                 <motion.div

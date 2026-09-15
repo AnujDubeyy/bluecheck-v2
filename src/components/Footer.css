@@ -16,18 +16,56 @@
     text-align: center;
 }
 
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer-logo-img {
-    height: 60px;
+    height: 52px;
     width: auto;
+    max-width: 200px;
     object-fit: contain;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .footer-slogan {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 400;
-    letter-spacing: 0.5px;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    max-width: 195px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.25s ease;
+}
+
+.footer-social-link:hover {
+    background: #0a66c2;
+    color: #ffffff;
+    border-color: #0a66c2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(10, 102, 194, 0.35);
 }
 
 .footer-links {

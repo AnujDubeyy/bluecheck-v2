@@ -58,7 +58,7 @@
     color: #F5F5F7;
 }
 
-.section-subheading,
+.about-modern .section-subheading,
 .about-block h3 {
     font-size: 2rem;
     font-weight: 700;
@@ -70,7 +70,7 @@
     transition: color 0.3s ease;
 }
 
-[data-theme='dark'] .section-subheading,
+[data-theme='dark'] .about-modern .section-subheading,
 [data-theme='dark'] .about-block h3 {
     color: #F5F5F7;
 }

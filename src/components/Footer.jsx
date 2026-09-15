@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Linkedin } from 'lucide-react';
 import logoFooter from '../assets/logo-dark.png';
 import './Footer.css';
 
@@ -18,6 +19,17 @@ const Footer = () => {
                     >
                         <img src={logoFooter} alt="Cybrion Consulting" className="footer-logo-img" />
                         <p className="footer-slogan">Clarity. Confidence. Action.</p>
+                        <div className="footer-socials">
+                            <a
+                                href="http://www.linkedin.com/company/cybrion-consulting-llp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-social-link"
+                                aria-label="Cybrion Consulting on LinkedIn"
+                            >
+                                <Linkedin size={18} />
+                            </a>
+                        </div>
                     </motion.div>
 
                     <motion.div
@@ -30,8 +42,14 @@ const Footer = () => {
                         <Link to="/">Home</Link>
                         <Link to="/about">About</Link>
                         <Link to="/services">Services</Link>
-
                         <Link to="/contact">Contact</Link>
+                        <a 
+                            href="http://www.linkedin.com/company/cybrion-consulting-llp" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
                         <Link to="/privacy-policy" style={{ textTransform: 'uppercase' }}>PRIVACY POLICY</Link>
                     </motion.div>
                 </div>

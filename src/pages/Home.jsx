@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Shield, Users, BarChart3, Globe, ArrowRight } from 'lucide-react';
+import { Shield, Users, BarChart3, Globe, ArrowRight, Linkedin } from 'lucide-react';
 import './Home.css';
 import SEO from '../components/SEO';
 import { useTheme } from '../context/ThemeContext';
@@ -172,8 +172,8 @@ const Home = () => {
                     <div className="expertise-cards-grid">
                         {[
                             { title: 'Compliance Consulting', desc: 'Seamlessly meeting regulatory requirements across India and global jurisdictions with confidence.', icon: Icons.Compliance },
-                            { title: 'Governance Frameworks', desc: 'Designing robust governance, board oversight, and risk control mechanisms.', icon: Icons.Governance },
-                            { title: 'Risk Consulting', desc: 'Identifying threat vectors, mitigating business vulnerabilities, and ensuring resilience.', icon: Icons.Consulting }
+                            { title: 'Governance Frameworks', desc: 'Designing robust governance, board oversight and risk control mechanisms.', icon: Icons.Governance },
+                            { title: 'Risk Consulting', desc: 'Identifying threat vectors, mitigating business vulnerabilities and ensuring resilience.', icon: Icons.Consulting }
                         ].map((service, index) => (
                             <motion.div
                                 className="expertise-card"
@@ -210,7 +210,7 @@ const Home = () => {
                             viewport={{ once: true }}
                         >The Cybrion Difference</motion.h2>
                         <motion.p
-                            className="section-subheading"
+                            className="difference-subheading"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -225,7 +225,7 @@ const Home = () => {
                             { title: 'Business Focused', desc: 'Tailored specifically for institutions of any size throughout their lifecycle.', icon: Icons.Focus },
                             { title: 'Regulatory Expert', desc: 'Deep understanding of frameworks to ensure comprehensive risk compliance.', icon: Icons.Expert },
                             { title: 'Practical Solutions', desc: 'Actionable ideas and security controls that work effectively on the ground.', icon: Icons.Practical },
-                            { title: 'Professional Conduct', desc: 'Ethical, disciplined, and transparent in every client engagement.', icon: Icons.Professional }
+                            { title: 'Professional Conduct', desc: 'Ethical, disciplined and transparent in every client engagement.', icon: Icons.Professional }
                         ].map((feature, index) => (
                             <motion.div
                                 className="difference-card"
@@ -243,6 +243,36 @@ const Home = () => {
                             </motion.div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* LinkedIn Connect Section */}
+            <section className="home-connect-section">
+                <div className="container">
+                    <motion.div 
+                        className="home-connect-card"
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <div className="home-connect-content">
+                            <span className="section-overline">STAY CONNECTED</span>
+                            <h2>Follow Cybrion Consulting on LinkedIn</h2>
+                            <p>
+                                Stay informed with our latest updates, industry analysis and cybersecurity regulatory insights.
+                            </p>
+                        </div>
+                        <a 
+                            href="http://www.linkedin.com/company/cybrion-consulting-llp" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="home-connect-btn"
+                        >
+                            <Linkedin size={20} />
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                    </motion.div>
                 </div>
             </section>
         </div>

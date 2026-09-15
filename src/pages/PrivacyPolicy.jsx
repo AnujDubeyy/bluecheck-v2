@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
         <div className="privacy-page">
             <SEO 
                 title="Privacy Policy & Terms of Use" 
-                description="Review the privacy practices, terms of use, and governing laws of Cybrion Consulting website." 
+                description="Review the privacy practices, terms of use and governing laws of Cybrion Consulting website." 
             />
             <div className="container">
                 <motion.div
